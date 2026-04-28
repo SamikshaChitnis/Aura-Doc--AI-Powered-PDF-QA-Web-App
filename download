@@ -1,0 +1,114 @@
+# AuraDoc 📄✨
+
+**Upload a document. Ask questions. Get precise answers.**
+
+AuraDoc is a Streamlit-based AI document Q&A app. Upload any PDF, start a chat, and ask questions — the app uses Groq's LLaMA 3.1 model to answer based strictly on your document's content. All chats are persisted in MongoDB so you can pick up where you left off.
+
+---
+
+## Features
+
+- 🔐 **User authentication** — register and login with hashed passwords (bcrypt)
+- 📎 **PDF upload** — extracts text from any PDF using pdfplumber
+- 💬 **Persistent chat history** — all conversations saved in MongoDB per user
+- 🤖 **AI answers** — powered by Groq API (LLaMA 3.1 8B Instant)
+- 🗑️ **Chat management** — open, switch, and delete past chats from the sidebar
+- 🐳 **Docker support** — run the full stack with a single command
+
+---
+
+## Tech Stack
+
+| Layer | Tech |
+|---|---|
+| Frontend | Streamlit |
+| AI / LLM | Groq API — `llama-3.1-8b-instant` |
+| Database | MongoDB |
+| PDF parsing | pdfplumber |
+| Auth | bcrypt |
+| Containerization | Docker + Docker Compose |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Docker](https://docs.docker.com/get-docker/) and Docker Compose
+- A free [Groq API key](https://console.groq.com/)
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/YOUR_USERNAME/AuraDoc.git
+cd AuraDoc
+```
+
+### 2. Set up your environment variables
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and add your Groq API key:
+
+```
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+### 3. Run with Docker
+
+```bash
+docker-compose up --build
+```
+
+Then open [http://localhost:8501](http://localhost:8501) in your browser.
+
+---
+
+## Running Locally (without Docker)
+
+Make sure you have Python 3.10+ and a running MongoDB instance.
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+> MongoDB is expected at `mongodb://mongodb:27017/` by default (matches the Docker service name). If running locally, update the connection string in `app.py` to `mongodb://localhost:27017/`.
+
+---
+
+## Project Structure
+
+```
+AuraDoc/
+├── app.py               # Main Streamlit application
+├── requirements.txt     # Python dependencies
+├── Dockerfile           # Container build instructions
+├── docker-compose.yml   # Full stack orchestration
+├── .env.example         # Environment variable template
+└── .gitignore
+```
+
+---
+
+## Environment Variables
+
+| Variable | Description |
+|---|---|
+| `GROQ_API_KEY` | Your Groq API key from [console.groq.com](https://console.groq.com/) |
+
+---
+
+## ⚠️ Security Notes
+
+- **Never commit your `.env` file.** It's listed in `.gitignore` for this reason.
+- Passwords are hashed with bcrypt before being stored in MongoDB.
+- The Groq API key is loaded from the environment — it is never hard-coded.
+
+---
+
+## License
+
+MIT — feel free to use, modify, and share.
