@@ -135,4 +135,4 @@ MIT License — free to use, modify, and distribute.
 
 ## Author
 
-Built by Samiksha Chitnis(https://github.com/YOUR_USERNAME)
+Built by Samiksha Chitnis.
