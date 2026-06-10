@@ -39,30 +39,14 @@ AuraDoc is a Streamlit web app that lets you chat with your PDF documents. Power
 
 ---
 
-### 1. Clone the repository
+### 1. Set up your API key
 
-```bash
-git clone https://github.com/YOUR_USERNAME/AuraDoc.git
-cd AuraDoc
 ```
-
----
-
-### 2. Set up your API key
-
-```bash
-cp .env.example .env
-```
-
-Open the `.env` file and paste your Groq API key:
+Open the `grop` create your api key and paste your Groq API key:
 
 ```
 GROQ_API_KEY=your_groq_api_key_here
 ```
-
- Never share or commit your `.env` file. It is already listed in `.gitignore`.
-
----
 
 ### 3. Run the app
 
