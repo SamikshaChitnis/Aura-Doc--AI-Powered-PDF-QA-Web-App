@@ -44,7 +44,7 @@ AuraDoc uses Groq's LLM API to generate answers from uploaded PDFs.
 
 - Create a Groq Account
 - Visit:(https://console.groq.com)
-- Generate API key:(https://console.groq.com/keys)Click and Create
+- Generate API key:(https://console.groq.com/keys) Click and Create
 
 ### 2. Add the Groq API Key
 - Open : app.py
