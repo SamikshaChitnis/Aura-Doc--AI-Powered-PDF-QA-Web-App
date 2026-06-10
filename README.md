@@ -39,67 +39,43 @@ AuraDoc is a Streamlit web app that lets you chat with your PDF documents. Power
 
 ---
 
-### 1. Set up your API key
+### 1. Set up your Groq API key
+AuraDoc uses Groq's LLM API to generate answers from uploaded PDFs.
 
-```
-Open the `grop` create your api key and paste your Groq API key:
+Create a Groq Account
+Visit:(https://console.groq.com)
+Generate API key:(https://console.groq.com/keys)Click and Create
 
-```
-GROQ_API_KEY=your_groq_api_key_here
-```
+### 2. Add the Groq API Key
+Open : app.py
+Replace :  "Authorization": "Bearer YOUR_API_KEY"
 
-### 3. Run the app
+### 3. Install Docker Desktop
+Windows : https://www.docker.com/products/docker-desktop
 
-```bash
-docker-compose up --build
-```
+### 4. Start Docker Desktop
+After installation:
+Open Docker Desktop
+Wait until Docker starts successfully
+You should see: Docker Engine Running
 
-Then open your browser and go to → **http://localhost:8501**
+### 5. Open Terminal
+Navigate to the AuraDoc project folder.
+Open Command Prompt or PowerShell: cd path\to\AuraDoc
 
----
+### 6. Build and Run the application
+Run: docker-compose up --build
+This command:
 
-## Running Without Docker
+Builds the Docker image
+Installs Python dependencies
+Starts the AuraDoc container
+Starts MongoDB container
+Connects both containers automatically
 
-Make sure you have **Python 3.10+** and **MongoDB** running locally.
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-> If running locally, update the MongoDB connection string in `app.py` from `mongodb://mongodb:27017/` to `mongodb://localhost:27017/`
-
----
-
-## Project Structure
-
-```
-AuraDoc/
-├── app.py                 # Main application
-├── requirements.txt       # Python dependencies
-├── Dockerfile             # Docker image config
-├── docker-compose.yml     # Full stack setup (app + MongoDB)
-├── .env.example           # API key template (safe to commit)
-└── .gitignore             # Files excluded from Git
-```
-
----
-
-## Environment Variables
-
-| Variable | Required | Description |
-|---|---|---|
-| `GROQ_API_KEY` | ✅ Yes | Your API key from [console.groq.com](https://console.groq.com/) |
-
----
-
-## How It Works
-
-1. **Register / Login** — Create an account securely
-2. **Upload a PDF** — Use the sidebar to upload any PDF file
-3. **Start chatting** — Type your question in the chat box
-4. **Get answers** — The AI reads your document and responds based on its content
-5. **Come back later** — All chats are saved and accessible from the sidebar
+### 7. Verify Successful Startup & Open the Application
+You can now view your Streamlit app in your browser : Local URL: http://localhost:8501
+Open your browser and visit: http://localhost:8501
 
 ---
 
@@ -110,13 +86,6 @@ AuraDoc/
 - `.env` is excluded from version control via `.gitignore`
 
 ---
-
-## License
-
-MIT License — free to use, modify, and distribute.
-
----
-
 ## Author
 
 Built by Samiksha Chitnis.
