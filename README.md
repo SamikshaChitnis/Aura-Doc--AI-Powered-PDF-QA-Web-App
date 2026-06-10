@@ -65,11 +65,11 @@ AuraDoc uses Groq's LLM API to generate answers from uploaded PDFs.
 - Run: docker-compose up --build
 - This command:
 
-Builds the Docker image
-Installs Python dependencies
-Starts the AuraDoc container
-Starts MongoDB container
-Connects both containers automatically
+-Builds the Docker image
+-Installs Python dependencies
+-Starts the AuraDoc container
+-Starts MongoDB container
+-Connects both containers automatically
 
 ### 7. Verify Successful Startup & Open the Application
 - You can now view your Streamlit app in your browser : Local URL: http://localhost:8501
