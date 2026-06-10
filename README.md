@@ -8,12 +8,12 @@ AuraDoc is a Streamlit web app that lets you chat with your PDF documents. Power
 
 ## What It Does
 
-- 📎 Upload any PDF and start a conversation with it
-- 💬 Ask questions in plain English and get precise answers
-- 🔐 Secure user accounts with encrypted passwords
-- 🗂️ All your chats are saved — pick up where you left off
-- 🗑️ Manage and delete past chats from the sidebar
-- 🐳 Runs fully containerized with Docker — one command setup
+- Upload any PDF and start a conversation with it
+- Ask questions in plain English and get precise answers
+- Secure user accounts with encrypted passwords
+- All your chats are saved — pick up where you left off
+- Manage and delete past chats from the sidebar
+- Runs fully containerized with Docker — one command setup
 
 ---
 
@@ -60,7 +60,7 @@ Open the `.env` file and paste your Groq API key:
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-> ⚠️ Never share or commit your `.env` file. It is already listed in `.gitignore`.
+ Never share or commit your `.env` file. It is already listed in `.gitignore`.
 
 ---
 
