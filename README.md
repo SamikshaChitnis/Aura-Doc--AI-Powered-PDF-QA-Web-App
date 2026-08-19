@@ -80,8 +80,3 @@ AuraDoc uses Groq's LLM API to generate answers from uploaded PDFs.
 ## Security
 
 - Passwords are hashed using **bcrypt** before storage — never stored in plain text
-
----
-## Author
-
-Built by Samiksha Chitnis.
